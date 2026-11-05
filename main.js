@@ -18,3 +18,23 @@ const CITIES = {
 };
 
 // P1 부터 여기 아래에 씁니다.
+const form = document.querySelector("#run-form");
+const citySelect = document.querySelector("#city");
+const rainInput = document.querySelector("#rain-limit");
+const windInput = document.querySelector("#wind-limit");
+const statusEL = document.querySelector("#status");
+const summaryEL=document.querySelector("#summary");
+const rowsEL=document.querySelector("#rows");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const city=CITIES[citySelect.value];
+  const rain= Number(rainInput.value);
+  const wind=Number(windInput.value);
+  //statusEl.textContent = 
+  
+  statusEL.textContent=
+  'Loading...';
+  
+  console.log(city);
+});
