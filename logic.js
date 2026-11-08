@@ -17,6 +17,17 @@ export function toDays(daily) {
     }));
 }
 
+export function reasons(day, limits) {
+    const list = [];
+    if (day.rain > limits.rain) {
+        list.push("rain");
+    }
+    if (day.wind > limits.wind) {
+        list.push("wind");
+    }
+    return list;
+}
+
 export function isGoodDay(day, limits) {
     return day.rain <= limits.rain && day.wind <= limits.wind;
 }
