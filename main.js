@@ -68,6 +68,16 @@ form.addEventListener("submit", async(event) => {
   render();
 });
 
+rainInput.addEventListener("input", () => {
+  state.limits.rain = Number(rainInput.value);
+  render();
+});
+
+windInput.addEventListener("input", () => {
+  state.limits.wind = Number(windInput.value);
+  render();
+});
+
 function dayRow(day) {
   const tr= document.createElement("tr");
   for (const text of[day.date.slice(5), `${day.max}°`, `${day.wind} km/h`, `${day.rain}%`]) {
