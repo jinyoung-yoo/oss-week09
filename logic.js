@@ -29,7 +29,7 @@ export function reasons(day, limits) {
 }
 
 export function isGoodDay(day, limits) {
-    return day.rain <= limits.rain && day.wind <= limits.wind;
+    return reasons(day, limits).length === 0; 
 }
 
 export function summarize(days, limits) {
